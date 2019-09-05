@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Nav from "./nav";
-import { Layout, Row, Col, Divider, Dropdown, Button } from "antd";
+import { Layout, Row, Col, Divider, Icon, Dropdown, Button } from "antd";
 
 export default class MainHeader extends Component {
     render () {
