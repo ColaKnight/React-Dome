@@ -28,3 +28,9 @@
 #nav .ant-menu-item-selected a {
     color: #1890ff;
 }
+.xsNav {
+    position: absolute; 
+    right: 0;
+    top: 0;
+    width: auto;
+}
