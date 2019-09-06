@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Row, Col } from "antd";
 
+let arr = [];
+for (let i = 0; i < 100; i++) {
+    arr.push(<li>这是第{i}个li</li>)
+}
+
 class Index extends Component {
     render () {
         return (
             <Row className="wrap">
                 <Col md={6}>
-                    <Menu className="indexMenu">
+                    <Menu id="indexMenu">
                         <Menu.Item>
                             <Link to="./index/all">全部</Link>
                         </Menu.Item>
@@ -30,9 +35,9 @@ class Index extends Component {
                 </Col>
                 <Col 
                     md={18} 
-                    style={{height:"500px"}}
                     className="indexList"
                 >
+                    {arr}
                 </Col>
             </Row>         
         );
