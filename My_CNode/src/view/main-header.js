@@ -16,8 +16,9 @@ export default class MainHeader extends Component {
                 <Col md={0} xs={24} className="xsNav">
                     <Dropdown 
                         overlay={<Nav id="xsNav" mode="vertical" />}
+                        placement="bottomRight"
                         trigger={["click", "touchend"]} 
-                        >
+                    >
                         <Button><Icon type="bars"/></Button>
                     </Dropdown>
                 </Col>
