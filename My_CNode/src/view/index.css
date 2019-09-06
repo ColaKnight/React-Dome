@@ -39,3 +39,7 @@
 .main {
     flex: 1;
 }
+.main .warp {
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
