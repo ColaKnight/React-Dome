@@ -41,5 +41,20 @@
 }
 .main .warp {
     border: 1px solid #ccc;
-    border-bottom: none;
+    border-top: none;
+}
+.indexMenu {
+    border-right: none;
+}
+.indexMenu li {
+    margin-right: -1px;
+    transition: none;
+}
+.indexMenu li:hover,
+.indexMenu .ant-menu-item-selected {
+    background: #e6f7ff;
+    border-right: 3px solid #1890ff;
+}
+.indexList {
+    border-left: 1px solid #ccc;
 }
