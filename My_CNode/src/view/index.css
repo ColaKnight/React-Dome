@@ -42,6 +42,12 @@
 .main .warp {
     border: 1px solid #ccc;
     border-top: none;
+    overflow: hidden;
+}
+.indexSider {
+    border-right: 1px solid #ccc; 
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
 }
 #indexMenu {
     border-right: none;
@@ -57,26 +63,11 @@
     background: #e6f7ff;
     border-right-color: #1890ff;
 }
-.indexList {
-    border-left: 1px solid #ccc; 
+#indexXSMenu {
+    display: flex;
 }
-@media all and (max-width: 767px) {
-    #indexMenu {
-        display: flex;
-        border-bottom: 1px solid #ccc;
-    }
-    #indexMenu li {
-        flex: 1;
-        margin: 0 0 -1px 0;
-        border: none;
-        border-bottom: 3px solid rgba(0, 0, 0, 0);
-    }
-    #indexMenu li:hover,
-    #indexMenu .ant-menu-item-selected {
-        background: none;
-        border-bottom-color: #1890ff;
-    }
-    .indexList {
-        border-left: none;
-    }
+#indexXSMenu li {
+    flex: 1;
+    float: none;
+    text-align: center;
 }
