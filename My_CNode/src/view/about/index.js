@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import { Card } from "antd";
+import data from "./data";
+import PublicCard from "../public_Card";
 
 class About extends Component {
     render () {
-        return "关于";
+        return (<PublicCard
+            data={data}
+        />);
     }
 }
 
