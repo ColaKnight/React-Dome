@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { List, Avatar } from "antd";
 import { Link } from "react-router-dom";
 import data from "./data";
+import TxtTag from "../txtTag";
 
 class IndexList extends Component {
     render () {
@@ -9,13 +10,20 @@ class IndexList extends Component {
             <List
                 loading={false}
                 dataSource={data.data}
-                renderItem={item=>(<List.Item>
+                renderItem={item=>(<List.Item
+                        actions={[
+                            "回复:"+item.reply_count,
+                            "访问:"+item.visit_count
+                        ]}
+                    >
                     <List.Item.Meta
                         avatar={<Avatar src={item.author.avatar_url}/>}
-                        title={<Link to={"/details/" + item.id}
-                                >
-                                {item.title}
-                                </Link>} 
+                        title={<div>
+                                <TxtTag data={item} />
+                                <Link to={"/details/" + item.id}>
+                                    {item.title}
+                                </Link>
+                            </div>} 
                         description={(<p>
                                     <Link to={"/user/" + item.author.loginname}>
                                         {item.author.loginname}
@@ -25,7 +33,6 @@ class IndexList extends Component {
                         />
                 </List.Item>)}
             >
-
             </List>
         );
     }
