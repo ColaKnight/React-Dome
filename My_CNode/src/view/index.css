@@ -1,73 +1,167 @@
-.pageWrap {
-    display: flex;
+*{
+    margin: 0px;
+    padding:0px;
+}
+body{
+    overflow-x:hidden;
+    min-width:370px;
+}
+.pageWrap{
     min-height: 100vh;
+    display: flex;
     flex-direction: column;
 }
-.warp {
-    max-width: 980px;
-    margin: 0 auto;
+
+.main{
+    flex: 1;
 }
-#logo {
-    color: #fff;
-    margin-bottom: 0;
+.main .wrap{
+    border: 1px solid #ccc;
+    height: 100%;
     text-align: center;
 }
-.headerDivider {
-    float: left;
-    margin: 10px 0;
-    height: 44px;
+.main .wrap .ant-menu-item-active{
+    background-color: #e6f7ff;
+    border-right: 1px solid #1890ff;
+    transition: 0.8s;
 }
-#nav {
-    float: left;
-    margin-left: 30px;
+.main .wrap .ant-menu-item-selected{
+    border-right: 1px solid #1890ff;
+}
+.main .wrap .indexSider{
+    border-right: none;
+}
+.main .wrap .indexList{
+    border:none;
+    border-left: 1px solid #ccc;
+}
+#indexXsMenu{
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    border-bottom: none;
+    margin: 0 0 -1px 0 ;
+}
+#indexXsMenu :hover,
+#indexXsMenu .ant-menu-item-selected{
+    border-right: none;
+}
+/*小屏下的菜单*/
+/*也可以直接再写一个Col  让xs：24  mode：horizontal
+  需要把indexMenu提取成一个组件
+@media all and (max-width:767px){
+    #indexMenu{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        border-bottom: 1px solid #ccc;
+    }
+    #indexMenu li {
+        margin: 0 0 -1px 0 ;
+        border: none;
+        border-bottom: 3px solid rabg(0,0,0,0);
+    }
+    #indexMenu .ant-menu-item-active,
+    #indexMenu .ant-menu-item-selected{
+        border-bottom:3px solid #1890ff;
+        transition: 0.5s;
+        background: none;
+    }
+}*/
+.header{
+    color: #fff;
+}
+#logo{
+    line-height: 64px;
+    color: #fff;
+    text-align: center;
+}
+.wrap{
+    max-width: 980px;
+    margin:0 auto;
+    height: 64px;
+} 
+.divider{
+    height:44px;
+    margin: 10px 0 ;
+}
+#nav{
     background: none;
-    border: none;
-    line-height: 62px;
+    line-height: 64px;
+    margin: -64px 0 0 30px;
 }
 #nav a {
     color: #fff;
 }
-#nav .ant-menu-item-selected a {
+#nav .ant-menu-item{
+    border:none;
+}
+#nav .ant-menu-item-selected a{
     color: #1890ff;
 }
-.xsNav {
-    position: absolute; 
-    right: 0;
-    top: 0;
-    width: auto;
+#nav .ant-menu-item :hover{
+    color: #1890ff;
 }
-.main {
-    flex: 1;
+.xsMenu{
+    position: absolute;
+    left: 95%;
 }
-.main .warp {
-    border: 1px solid #ccc;
-    border-top: none;
-    overflow: hidden;
+.ant-card-head-title{
+    white-space: pre-wrap;
 }
-.indexSider {
-    border-right: 1px solid #ccc; 
-    padding-bottom: 9999px;
-    margin-bottom: -9999px;
+.footer{
+    width: 100%;
+    text-align: center;
 }
-#indexMenu {
+
+.ant-list-item{
+    margin:0 10px;
+    padding: 10px 0 0 0;
+}
+.ant-list-item-meta-content{
+    text-align: left;
+}
+.ant-list-item-meta-title a {
+    color: #1890ff;
+}
+#card{
+    max-width: 980px;
+    margin: 0 auto;
+}
+.ant-card-body img{
+    max-width: 15%;
+    min-width: 100px;
+}
+.wrap .ant-card{
+    text-align: left;
+    border-left: none;
     border-right: none;
+    border-top: 1px solid #fff;
 }
-#indexMenu li {
-    margin-right: -1px;
-    transition: none;
-    text-align: center;
-    border-right: 3px solid rgba(0, 0, 0, 0);
+.avatar{
+    display: inline-block;
+    margin:20px auto;
+    width: 100px;
+    height: 100px;
 }
-#indexMenu li:hover,
-#indexMenu .ant-menu-item-selected {
-    background: #e6f7ff;
-    border-right-color: #1890ff;
+.userInfo{
+    font-size: 16px;
+    padding-bottom:15px;
+    border-bottom: 1px solid #ccc;
 }
-#indexXSMenu {
-    display: flex;
+.recentThings .ant-spin-container .ant-list-item .ant-row-flex{
+    margin-bottom: 15px;
 }
-#indexXSMenu li {
-    flex: 1;
-    float: none;
-    text-align: center;
+.userAvatar img{
+    min-width: 32px;
+}
+.ant-list-pagination {
+    /* padding-right: 18%; */
+    text-align:  center
+}
+.indexList {
+    padding: 0 10px;
+}
+.indexList p {
+    margin: 0;
 }

@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
 import IndexMenu from "./indexMenu";
-
-let arr = [];
-for (let i = 0; i < 100; i++) {
-    arr.push(<li>这是第{i}个li</li>)
-}
+import IndexList from "./list";
 
 class Index extends Component {
     render () {
@@ -28,7 +24,7 @@ class Index extends Component {
                     xs={24}
                     className="indexList"
                 >
-                    {arr}
+                    <IndexList />
                 </Col>
             </Row>         
         );
