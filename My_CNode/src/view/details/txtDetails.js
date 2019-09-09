@@ -12,12 +12,12 @@ class TxtDetails extends Component {
                 display:"flex",
                 alignItems:"center"
             }}>
-                <TxtTag data={data.data}/>
-                <Avatar src={data.data.author.avatar_url}/>
-                <Link to={"/user/"+data.data.author.loginname}>
-                    {data.data.author.loginname}
+                <TxtTag data={data}/>
+                <Avatar src={data.author.avatar_url}/>
+                <Link to={"/user/"+data.author.loginname}>
+                    {data.author.loginname}
                 </Link>
-                发表于:{data.data.create_at.split("T")[0]}
+                发表于:{data.create_at.split("T")[0]}
             </div>
         </div>);
         return ( <Card
@@ -26,10 +26,12 @@ class TxtDetails extends Component {
         >
             <div
                 dangerouslySetInnerHTML={{
-                    __html:data.data.content
+                    __html:data.content
                 }}
             >
             </div>
         </Card>);
     }
 }
+
+export default TxtDetails;
