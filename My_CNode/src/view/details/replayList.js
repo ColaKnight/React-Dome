@@ -22,7 +22,7 @@ class ReplayList extends Component {
                         >
                             <List.Item.Meta 
                                 avatar={<Avatar src={item.author.avatar_url}/>}
-                                description={<p>
+                                description={<div>
                                                 <Link to={"/user/"+item.author.loginname}>
                                                     {item.author.loginname}
                                                 </Link>
@@ -31,8 +31,14 @@ class ReplayList extends Component {
                                                 >
                                                     发表于:{item.create_at.split("T")[0]}
                                                 </span>
-                                            </p>}
+                                            </div>}
                             />
+                                <div
+                                    dangerouslySetInnerHTML={{
+                                        __html:item.content
+                                    }}
+                                >
+                                </div>
                         </List.Item>
                     )}
                 >
