@@ -11,7 +11,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-
 .main{
     flex: 1;
 }
@@ -164,4 +163,11 @@ body{
 }
 .indexList p {
     margin: 0;
+}
+.userAvatar {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px; 
 }
