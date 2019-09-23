@@ -148,6 +148,12 @@ body{
     padding-bottom:15px;
     border-bottom: 1px solid #ccc;
 }
+.userList{
+    line-height: 32px;
+}
+.userList .userName{
+    margin: 0 10px 0 5px;
+}
 .recentThings .ant-spin-container .ant-list-item .ant-row-flex{
     margin-bottom: 15px;
 }

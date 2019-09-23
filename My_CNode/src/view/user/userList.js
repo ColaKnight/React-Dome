@@ -11,16 +11,28 @@ class UserList extends Component {
             type="inner"
         >
             <List
+                className="userList"
                 dataSource={data}
                 renderItem={(item)=>(
-                    <List.Item key={item.id}>
+                    <List.Item key={item.id} style={{
+                        position: "relative"
+                    }}>
                         <Avatar src={item.author.avatar_url} />
-                        <Link to={"/user/"+item.author.loginname}>
+                        <Link to={"/user/"+item.author.loginname}
+                            className="userName"
+                        >
                             {item.author.loginname}
                         </Link>
                         <h4>
                             <Link to={"/details/"+item.id}>{item.title}</Link>
                         </h4>
+                        <time style={{
+                            position: "absolute",
+                            right: 0,
+                            top: 0
+                        }}>
+                            最后回复时间:{item.last_reply_at.split("T")[0]}
+                        </time>
                     </List.Item>
                 )}
             >
