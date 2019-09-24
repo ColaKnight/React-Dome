@@ -23,13 +23,15 @@ class UserList extends Component {
                         >
                             {item.author.loginname}
                         </Link>
-                        <h4>
+                        <h4 style={{
+                            display: "inline-block"
+                        }}>
                             <Link to={"/details/"+item.id}>{item.title}</Link>
                         </h4>
                         <time style={{
                             position: "absolute",
                             right: 0,
-                            top: 0
+                            top: "12px"
                         }}>
                             最后回复时间:{item.last_reply_at.split("T")[0]}
                         </time>

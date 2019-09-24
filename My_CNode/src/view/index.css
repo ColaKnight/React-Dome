@@ -154,6 +154,9 @@ body{
 .userList .userName{
     margin: 0 10px 0 5px;
 }
+.userList .ant-list-item-content{
+    display: block;
+}
 .recentThings .ant-spin-container .ant-list-item .ant-row-flex{
     margin-bottom: 15px;
 }
