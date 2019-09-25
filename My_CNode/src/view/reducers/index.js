@@ -1,4 +1,7 @@
 import { combineReducers } from "redux";
+import list from "./list";
+import user from "./user";
+import details from "./details";
 
 let reducer = combineReducers({
     list,
@@ -12,4 +15,4 @@ class reduces extends Component {
     }
 }
 
-export default reduces
+export default reduces;
