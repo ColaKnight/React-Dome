@@ -9,10 +9,4 @@ let reducer = combineReducers({
     user
 })
 
-class reduces extends Component {
-    render () {
-        return 
-    }
-}
-
-export default reduces;
+export default reducer;
