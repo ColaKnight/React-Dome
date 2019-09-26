@@ -6,4 +6,6 @@ ReactDome
 
 npm install
 
+npm start
+
 
