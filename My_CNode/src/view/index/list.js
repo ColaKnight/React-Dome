@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { List, Avatar } from "antd";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import data from "./data";
 import TxtTag from "../txtTag";
 
@@ -39,4 +40,4 @@ class IndexList extends Component {
     }
 }
 
-export default IndexList;
+export default connect(state=>state.list)(IndexList);
