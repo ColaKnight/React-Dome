@@ -7,6 +7,6 @@ let reducer = combineReducers({
     list,
     details,
     user
-})
+});
 
 export default reducer;
