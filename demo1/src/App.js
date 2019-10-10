@@ -3,9 +3,10 @@ import React, {Component} from "react"
 class App extends Component{
     render () {
         return (
-            <div>
-                Hello world
-            </div>
+            <ul className="my-list">
+                <li>Hello world</li>
+                <li>React</li>
+            </ul>
         )
     }
 }
