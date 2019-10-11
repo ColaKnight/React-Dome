@@ -4,8 +4,8 @@ class Sister extends Component{
     constructor (props) {
         super(props)
         this.state = {
-            inputValue: "ManBa",
-            list: []
+            inputValue: "",
+            list: ["按摩", "推背"]
         }
     }
 
@@ -15,16 +15,24 @@ class Sister extends Component{
         })
     }
 
+    addList(){
+        this.setState({
+            list: [...this.state.list, this.state.inputValue],
+            inputValue: ""
+        })
+    }
+
     render () {
         return (
             <Fragment>
                 <div>
                     <input value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
-                    <button>增加服务</button>
+                    <button onClick={this.addList.bind(this)}>增加服务</button>
                 </div>
                 <ul>
-                    <li>按摩</li>
-                    <li>推背</li>
+                    {this.state.list.map((item, index) => {
+                        return <li key={index + item}>{item}</li>
+                    })}
                 </ul>
             </Fragment>
         )
