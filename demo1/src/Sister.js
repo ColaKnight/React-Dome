@@ -22,6 +22,14 @@ class Sister extends Component{
         })
     }
 
+    deleteItem(index){
+        let list = this.state.list
+        list.splice(index, 1)
+        this.setState({
+            list: list
+        })
+    }
+
     render () {
         return (
             <Fragment>
@@ -31,7 +39,14 @@ class Sister extends Component{
                 </div>
                 <ul>
                     {this.state.list.map((item, index) => {
-                        return <li key={index + item}>{item}</li>
+                        return (
+                            <li 
+                                key={index + item}
+                                onClick={this.deleteItem.bind(this, index)}
+                            >
+                                {item}
+                            </li>
+                        )
                     })}
                 </ul>
             </Fragment>
