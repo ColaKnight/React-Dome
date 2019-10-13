@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from "react"
+import "./style.css"
 
 class Sister extends Component{
     constructor (props) {
@@ -33,8 +34,10 @@ class Sister extends Component{
     render () {
         return (
             <Fragment>
+                {/* 注释 */}
                 <div>
-                    <input value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
+                    <label htmlFor="add">增加服务:</label>
+                    <input id="add" className="input" value={this.state.inputValue} onChange={this.inputChange.bind(this)} />
                     <button onClick={this.addList.bind(this)}>增加服务</button>
                 </div>
                 <ul>
@@ -43,8 +46,8 @@ class Sister extends Component{
                             <li 
                                 key={index + item}
                                 onClick={this.deleteItem.bind(this, index)}
+                                dangerouslySetInnerHTML={{__html:item}}
                             >
-                                {item}
                             </li>
                         )
                     })}
