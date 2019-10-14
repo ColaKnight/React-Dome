@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from "react"
 import "./style.css"
+import SisterItem from "./SisterItem"
 
 class Sister extends Component{
     constructor (props) {
@@ -43,12 +44,9 @@ class Sister extends Component{
                 <ul>
                     {this.state.list.map((item, index) => {
                         return (
-                            <li 
-                                key={index + item}
-                                onClick={this.deleteItem.bind(this, index)}
-                                dangerouslySetInnerHTML={{__html:item}}
-                            >
-                            </li>
+                            <div>
+                                <SisterItem />
+                            </div>
                         )
                     })}
                 </ul>
