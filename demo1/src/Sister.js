@@ -44,11 +44,11 @@ class Sister extends Component{
                 <ul>
                     {this.state.list.map((item, index) => {
                         return (
-                            <div>
-                                <SisterItem 
-                                    itemData={item}
-                                />
-                            </div>
+                            <SisterItem 
+                                key={index+item}
+                                itemData={item}
+                                deleteItem={this.deleteItem.bind(this)}
+                            />
                         )
                     })}
                 </ul>
