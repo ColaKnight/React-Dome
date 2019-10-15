@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 class SisterItem extends Component {
    
     render() { 
+        let {itemData} = this.props;
         return (  
-            <li>小街基</li>
+            <li
+                dangerouslySetInnerHTML={{__html:itemData}}
+            >
+            </li>
         );
     }
 }

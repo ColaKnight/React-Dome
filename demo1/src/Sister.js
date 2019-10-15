@@ -45,7 +45,9 @@ class Sister extends Component{
                     {this.state.list.map((item, index) => {
                         return (
                             <div>
-                                <SisterItem />
+                                <SisterItem 
+                                    itemData={item}
+                                />
                             </div>
                         )
                     })}
