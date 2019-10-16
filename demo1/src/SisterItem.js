@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types"
 
 class SisterItem extends Component {
    
@@ -12,15 +13,26 @@ class SisterItem extends Component {
     }
 
     render() { 
-        let {itemData} = this.props;
+        let {avname, itemData} = this.props;
         return (  
             <li
                 onClick={this.handleClick}
-                dangerouslySetInnerHTML={{__html:itemData}}
+                dangerouslySetInnerHTML={{__html:avname + itemData}}
             >
             </li>
         );
     }
+}
+
+SisterItem.protoTypes={
+    avname: PropTypes.string.isRequired,
+    itemData: PropTypes.string,
+    index: PropTypes.number,
+    deleteItem:PropTypes.func
+}
+
+SisterItem.defaultProps={
+    avname:"小花"
 }
  
 export default SisterItem;

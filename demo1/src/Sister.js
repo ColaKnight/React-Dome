@@ -47,6 +47,7 @@ class Sister extends Component{
                             <SisterItem 
                                 key={index+item}
                                 itemData={item}
+                                index={index}
                                 deleteItem={this.deleteItem.bind(this)}
                             />
                         )
