@@ -3,6 +3,8 @@ import "./style.css"
 import SisterItem from "./SisterItem"
 
 class Sister extends Component{
+    //生命周期函数  在某一时刻 可以自动执行的函数
+    //初始化阶段  set props and state
     constructor (props) {
         super(props)
         this.state = {
@@ -35,7 +37,17 @@ class Sister extends Component{
         })
     }
 
+    UNSAFE_componentWillMount (){
+        console.log("UNSAFE_componentWillMount ----组件将要挂载")
+    }
+
+    componentDidMount(){
+        console.log("componentDidMount----组件挂载完成")
+    }
+
+    //虚拟DOM挂载 渲染
     render () {
+        console.log("render----组件挂载中")
         return (
             <Fragment>
                 {/* 注释 */}
