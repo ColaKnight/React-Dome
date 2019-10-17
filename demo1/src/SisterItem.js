@@ -12,6 +12,11 @@ class SisterItem extends Component {
         this.props.deleteItem(this.props.index)
     }
 
+    //组件第一次存在于DOM中，函数是不会被执行
+    //如果已经存在于DOM中，函数才会被执行
+    UNSAFE_componentWillReceiveProps (){
+        console.log("child----UNSAFE_componentWillReceiveProps ")
+    }
     render() { 
         let {avname, itemData} = this.props;
         return (  

@@ -45,9 +45,23 @@ class Sister extends Component{
         console.log("componentDidMount----组件挂载完成")
     }
 
+    shouldComponentUpdate(){
+        console.log("1_shouldComponentUpdate----组件更新之前执行")
+        return true
+    }
+
+    UNSAFE_componentWillUpdate (){
+        console.log("2-UNSAFE_componentWillUpdate ----"+
+        "在组件接收到新的props或者state但还没有render时被调用。在初始化时不会被调用")
+    }
+
+    componentDidUpdate(){
+        console.log("4_componentDidUpdate---在组件完成更新后立即调用。在初始化时不会被调用")
+    }
+
     //虚拟DOM挂载 渲染
     render () {
-        console.log("render----组件挂载中")
+        console.log("3_render----组件挂载中")
         return (
             <Fragment>
                 {/* 注释 */}
