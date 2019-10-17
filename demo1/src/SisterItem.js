@@ -22,6 +22,14 @@ class SisterItem extends Component {
         console.log("componentWillUnmount")
     }
 
+    shouldComponentUpdate(nextProps, nextState){
+        if (nextProps.itemData !== this.props.itemData) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     render() { 
         let {avname, itemData} = this.props;
         return (  
