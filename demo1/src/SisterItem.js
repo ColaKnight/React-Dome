@@ -17,6 +17,11 @@ class SisterItem extends Component {
     UNSAFE_componentWillReceiveProps (){
         console.log("child----UNSAFE_componentWillReceiveProps ")
     }
+
+    componentWillUnmount(){
+        console.log("componentWillUnmount")
+    }
+
     render() { 
         let {avname, itemData} = this.props;
         return (  
