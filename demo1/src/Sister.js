@@ -38,7 +38,7 @@ class Sister extends Component{
     }
 
     UNSAFE_componentWillMount (){
-        console.log("UNSAFE_componentWillMount ----组件将要挂载")
+      
     }
 
     componentDidMount(){
