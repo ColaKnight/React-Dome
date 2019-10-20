@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from "react"
+import axios from "axios"
 import "./style.css"
 import SisterItem from "./SisterItem"
+import { thisExpression } from "@babel/types"
 
 class Sister extends Component{
     //生命周期函数  在某一时刻 可以自动执行的函数
@@ -35,6 +37,16 @@ class Sister extends Component{
         this.setState({
             list: list
         })
+    }
+
+    componentDidMount(){
+        axios.post('https://web-api.juejin.im/v3/web/wbbr/bgeda')
+            .then((res)=>{
+                console.log("获取数据成功:" + JSON.stringify(res))
+            })
+            .catch((error)=>{
+                console.log("获取数据失败:"+error)
+            })
     }
     
     //虚拟DOM挂载 渲染
