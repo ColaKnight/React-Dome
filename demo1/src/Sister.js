@@ -3,6 +3,7 @@ import axios from "axios"
 import "./style.css"
 import SisterItem from "./SisterItem"
 import Boss from "./Boss"
+import {CSSTransition, TransitionGroup} from "react-transition-group"
 
 class Sister extends Component{
     //生命周期函数  在某一时刻 可以自动执行的函数
@@ -70,16 +71,26 @@ class Sister extends Component{
                     <button onClick={this.addList.bind(this)}>增加服务</button>
                 </div>
                 <ul ref={(ul)=>{this.ul=ul}}>
-                    {this.state.list.map((item, index) => {
-                        return (
-                            <SisterItem 
-                                key={index+item}
-                                itemData={item}
-                                index={index}
-                                deleteItem={this.deleteItem.bind(this)}
-                            />
-                        )
-                    })}
+                    <TransitionGroup>
+                         {this.state.list.map((item, index) => {
+                            return (
+                                <CSSTransition
+                                    timeout={2000}
+                                    classNames="boss-text"
+                                    unmountOnExit
+                                    appear={true}
+                                    key={index+item}
+                                >
+                                    <SisterItem 
+                                        key={index+item}
+                                        itemData={item}
+                                        index={index}
+                                        deleteItem={this.deleteItem.bind(this)}
+                                    />
+                                </CSSTransition>
+                            )
+                        })}
+                    </TransitionGroup>
                 </ul>
                 <Boss />
             </Fragment>
