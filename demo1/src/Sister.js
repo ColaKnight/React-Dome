@@ -11,7 +11,7 @@ class Sister extends Component{
         super(props)
         this.state = {
             inputValue: "",
-            list: ["按摩", "推背"]
+            list: []
         }
     }
 
@@ -40,9 +40,12 @@ class Sister extends Component{
     }
 
     componentDidMount(){
-        axios.post('https://web-api.juejin.im/v3/web/wbbr/bgeda')
+        axios.get('https://www.easy-mock.com/mock/5dac472de8df8e174237d974/ReactDemo01/sister')
             .then((res)=>{
                 console.log("获取数据成功:" + JSON.stringify(res))
+                this.setState({
+                    list: res.data.data
+                })
             })
             .catch((error)=>{
                 console.log("获取数据失败:"+error)
