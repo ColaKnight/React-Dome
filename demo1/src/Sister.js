@@ -2,7 +2,7 @@ import React, {Component, Fragment} from "react"
 import axios from "axios"
 import "./style.css"
 import SisterItem from "./SisterItem"
-import { thisExpression } from "@babel/types"
+import Boss from "./Boss"
 
 class Sister extends Component{
     //生命周期函数  在某一时刻 可以自动执行的函数
@@ -81,6 +81,7 @@ class Sister extends Component{
                         )
                     })}
                 </ul>
+                <Boss />
             </Fragment>
         )
     }
