@@ -38,7 +38,7 @@ class SisterItem extends Component {
                 dangerouslySetInnerHTML={{__html:avname + itemData}}
             >
             </li>
-        );
+        )
     }
 }
 
