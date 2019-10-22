@@ -4,6 +4,8 @@
 
 2.React+antd仿写CNode中文社区
 
+3.Redux
+
 ``` bash
 
 # install dependencies
