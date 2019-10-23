@@ -9,7 +9,6 @@ const data = [
 ]
 
 class ToodList extends Component {
- 
     render() { 
         return ( 
             <div style={{margin:"10px"}}>
