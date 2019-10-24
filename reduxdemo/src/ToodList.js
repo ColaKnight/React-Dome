@@ -7,17 +7,16 @@ class ToodList extends Component {
     
     constructor(props){
         super(props)
-       
-       
+        this.state=store.getState()
+        console.log(this.state)
+        this.onAddBtn=this.onAddBtn.bind(this)
         this.onChangeInputValue=this.onChangeInputValue.bind(this)
         this.storeChange=this.storeChange.bind(this)
-        this.state=store.getState()
         store.subscribe(this.storeChange)
     }
 
     storeChange(){
         this.setState(store.getState())
-        console.log(this.state)
     }
 
     onChangeInputValue(e){
@@ -26,6 +25,11 @@ class ToodList extends Component {
             type: "changeInput",
             value: e.target.value
         }
+        store.dispatch(action)
+    }
+
+    onAddBtn(){
+        const action={type: "addItem"}
         store.dispatch(action)
     }
 
@@ -39,7 +43,10 @@ class ToodList extends Component {
                         onChange={this.onChangeInputValue}
                         value={this.state.inputValue}
                     />
-                    <Button type="primary">增加</Button>
+                    <Button 
+                        type="primary"
+                        onClick={this.onAddBtn}
+                    >增加</Button>
                 </div>
                 <div style={{margin:"10px", width:"300px"}}>
                     <List

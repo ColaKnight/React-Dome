@@ -8,12 +8,19 @@ const defaultState = {
 }
 
 export default (state=defaultState, action) => {
-    console.log(state, action)
-    //Reducer只能接受state、不能改变state
+    console.log("reducer",state, action)
     if (action.type === "changeInput") {
         let newState = JSON.parse(JSON.stringify(state))
         newState.inputValue=action.inputValue
         return newState
     }
+
+    if (action.type === "addItem") {
+        let newState = JSON.parse(JSON.stringify(state))
+        newState.list.push(state.inputValue)
+        newState.inputValue = ""
+        return newState
+    }
+
     return state
 }
