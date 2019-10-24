@@ -33,6 +33,11 @@ class ToodList extends Component {
         store.dispatch(action)
     }
 
+    onDeleteItem(index){
+        const action={type: "deleteItem", index}
+        store.dispatch(action)
+    }
+
     render() { 
         return ( 
             <div style={{margin:"10px"}}>
@@ -52,8 +57,10 @@ class ToodList extends Component {
                     <List
                         bordered
                         dataSource={this.state.list}
-                        renderItem={item=>(
-                            <List.Item>
+                        renderItem={(item, index)=>(
+                            <List.Item
+                                onClick={this.onDeleteItem.bind(this, index)}
+                            >
                                 {item}
                             </List.Item>
                         )}
