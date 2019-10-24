@@ -7,8 +7,26 @@ class ToodList extends Component {
     
     constructor(props){
         super(props)
-        console.log(store.getState())
+       
+       
+        this.onChangeInputValue=this.onChangeInputValue.bind(this)
+        this.storeChange=this.storeChange.bind(this)
         this.state=store.getState()
+        store.subscribe(this.storeChange)
+    }
+
+    storeChange(){
+        this.setState(store.getState())
+        console.log(this.state)
+    }
+
+    onChangeInputValue(e){
+        console.log(e.target.value)
+        const action = {
+            type: "changeInput",
+            value: e.target.value
+        }
+        store.dispatch(action)
     }
 
     render() { 
@@ -18,6 +36,8 @@ class ToodList extends Component {
                     <Input 
                         placeholder={this.state.inputValue}
                         style={{width:"250px", marginRight:"10px"}}
+                        onChange={this.onChangeInputValue}
+                        value={this.state.inputValue}
                     />
                     <Button type="primary">增加</Button>
                 </div>
