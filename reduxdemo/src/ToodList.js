@@ -8,7 +8,6 @@ class ToodList extends Component {
     constructor(props){
         super(props)
         this.state=store.getState()
-        console.log(this.state)
         this.onAddBtn=this.onAddBtn.bind(this)
         this.onChangeInputValue=this.onChangeInputValue.bind(this)
         this.storeChange=this.storeChange.bind(this)
