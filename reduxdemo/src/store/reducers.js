@@ -11,7 +11,7 @@ export default (state=defaultState, action) => {
     console.log("reducer",state, action)
     if (action.type === "changeInput") {
         let newState = JSON.parse(JSON.stringify(state))
-        newState.inputValue=action.value
+        newState.inputValue = action.value
         return newState
     }
 
