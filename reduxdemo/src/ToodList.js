@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Input, Button, List } from 'antd';
+import React, { Component } from 'react'
+import { Input, Button, List } from 'antd'
 import {changeInputAction, addItemAction, deleteItemAction} from "./store/actionCreators"
 import store from "./store"
 import "antd/dist/antd.css"
