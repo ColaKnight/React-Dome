@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Input, Button, List } from 'antd';
+import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM} from "./store/actionTypes"
 import store from "./store"
 import "antd/dist/antd.css"
 
@@ -21,19 +22,19 @@ class ToodList extends Component {
     onChangeInputValue(e){
         console.log(e.target.value)
         const action = {
-            type: "changeInput",
+            type: CHANGE_INPUT,
             value: e.target.value
         }
         store.dispatch(action)
     }
 
     onAddBtn(){
-        const action={type: "addItem"}
+        const action={type: ADD_ITEM}
         store.dispatch(action)
     }
 
     onDeleteItem(index){
-        const action={type: "deleteItem", index}
+        const action={type: DELETE_ITEM, index}
         store.dispatch(action)
     }
 
