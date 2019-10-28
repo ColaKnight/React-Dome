@@ -15,7 +15,9 @@ const TodoListUI = (props) => {
                 <Button 
                     type="primary"
                     onClick={props.onAddClick}
-                >增加</Button>
+                >   
+                    增加
+                </Button>
             </div>
             <div style={{margin:"10px", width:"300px"}}>
                 <List
