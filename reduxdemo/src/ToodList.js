@@ -30,7 +30,6 @@ class ToodList extends Component {
     }
 
     onDeleteItem(index){
-        console.log(index)
         const action = deleteItemAction(index)
         store.dispatch(action)
     }
