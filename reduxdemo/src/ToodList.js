@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {changeInputAction, addItemAction, deleteItemAction} from "./store/actionCreators"
+import {changeInputAction, addItemAction, deleteItemAction, getListAction} from "./store/actionCreators"
 import store from "./store"
 import TodoListUI from "./TodoListUI"
 
@@ -13,6 +13,16 @@ class ToodList extends Component {
         this.onChangeInputValue=this.onChangeInputValue.bind(this)
         this.storeChange=this.storeChange.bind(this)
         store.subscribe(this.storeChange)
+    }
+
+    componentDidMount(){
+        const data = [
+                "早上6点起床跑步",
+                "中午1点午休",
+                "晚上8点到10点，学习2小时"
+            ]
+        const action = getListAction(data)
+        store.dispatch(action)
     }
 
     storeChange(){

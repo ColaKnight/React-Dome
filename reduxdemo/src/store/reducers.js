@@ -1,12 +1,8 @@
-import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM} from "./actionTypes"
+import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM, GET_LIST} from "./actionTypes"
 
 const defaultState = {
     inputValue: "Write Something",
-    list: [
-         "篮球",
-        "足球",
-        "乒乓球"
-    ]
+    list: []
 }
 
 export default (state=defaultState, action) => {
@@ -26,6 +22,13 @@ export default (state=defaultState, action) => {
     if (action.type === DELETE_ITEM) {
         let newState = JSON.parse(JSON.stringify(state))
         newState.list.splice(action.index, 1)
+        return newState
+    }
+
+    if (action.type === GET_LIST) {
+        console.log(action)
+        let newState = JSON.parse(JSON.stringify(state))
+        newState.list = action.data
         return newState
     }
     
