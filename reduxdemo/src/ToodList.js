@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import {changeInputAction, addItemAction, deleteItemAction, getListAction} from "./store/actionCreators"
+import {getTodoList, changeInputAction, addItemAction, deleteItemAction} from "./store/actionCreators"
 import store from "./store"
 import TodoListUI from "./TodoListUI"
-import axios from "axios"
 
 class ToodList extends Component {
     
@@ -17,20 +16,8 @@ class ToodList extends Component {
     }
 
     componentDidMount(){
-        const data = [
-                "早上6点起床跑步",
-                "中午1点午休",
-                "晚上8点到10点，学习2小时"
-            ]
-        const action = getListAction(data)
+        const action = getTodoList();
         store.dispatch(action)
-        // axios.get("http://rap2api.taobao.org/app/mock/235331/getList")
-        //     .then((res) => {
-        //         const data = res.data
-        //         const action = getListAction(data)
-        //         store.dispatch(action)
-        //     })
-        
     }
 
     storeChange(){
