@@ -3,7 +3,6 @@ import { Input, Button, List } from 'antd'
 import "antd/dist/antd.css"
 
 const TodoListUI = (props) => {
-    
     return ( 
         <div style={{margin:"10px"}}>
             <div>
