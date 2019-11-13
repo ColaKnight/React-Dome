@@ -16,8 +16,7 @@ class ToodList extends Component {
     }
 
     componentDidMount(){
-        // const action = getTodoList();
-        // store.dispatch(action)
+       
     }
 
     storeChange(){
