@@ -6,7 +6,9 @@
 
 3.Redux
 
+
 ``` bash
+build setup
 
 # install dependencies
 npm install
