@@ -4,7 +4,7 @@
 
 2.React+antd仿写CNode中文社区
 
-3.Redux
+3.React进阶之Redux
 
 
 ``` bash
