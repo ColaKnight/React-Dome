@@ -28,12 +28,5 @@ export const getTodoList = () => {
         ]
         const action = getListAction(data)
         dispatch(action)
-
-        // axios.get("http://rap2api.taobao.org/app/mock/235331/getList")
-        //     .then((res) => {
-        //         const data = res.data
-        //         const action = getListAction(data)
-        //         store.dispatch(action)
-        //     })
     }
 }
