@@ -15,10 +15,6 @@ class ToodList extends Component {
         store.subscribe(this.storeChange)
     }
 
-    componentDidMount(){
-       
-    }
-
     storeChange(){
         this.setState(store.getState())
     }
