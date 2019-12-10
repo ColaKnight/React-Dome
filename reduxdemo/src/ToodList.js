@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {getTodoList, changeInputAction, addItemAction, deleteItemAction} from "./store/actionCreators"
+import {changeInputAction, addItemAction, deleteItemAction} from "./store/actionCreators"
 import store from "./store"
 import TodoListUI from "./TodoListUI"
 
