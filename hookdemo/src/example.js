@@ -5,7 +5,7 @@ function Example() {
     return (
         <div>
             <p>You Clicked {count} times</p>
-            <button onClick={()=>{setCount(count)}}>Click Me</button>
+            <button onClick={()=>{setCount(count+1)}}>Click Me</button>
         </div>
     )
 }
