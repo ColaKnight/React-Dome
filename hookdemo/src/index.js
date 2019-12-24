@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Example from './example'
+import Example4 from './example4'
 
 ReactDOM.render(
-    <Example />, 
+    <Example4 />, 
     document.getElementById('root')
 );
 

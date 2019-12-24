@@ -29,6 +29,7 @@ function Example() {
             console.log("=============")
         }
     }, [count])
+    
     return (
         <div>
             <p>You Clicked {count} times</p>
