@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Example4 from './example4'
+import ReducerDemo from './example5'
 
 ReactDOM.render(
-    <Example4 />, 
+    <ReducerDemo />, 
     document.getElementById('root')
 );
 
